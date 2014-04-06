@@ -13,6 +13,7 @@ import org.newdawn.slick.state.StateBasedGame;
 public class MainMenuState extends BasicGameState
 {
     public int id;
+
     public MainMenuState(int id)
     {
         this.id=id;
