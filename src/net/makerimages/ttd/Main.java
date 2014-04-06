@@ -20,9 +20,10 @@ public class Main extends StateBasedGame
     @Override
     public void initStatesList(GameContainer gameContainer) throws SlickException
     {
-        //TODO: add States here!
         addState(new MainMenuState(0));
     }
+
+
     public void create() throws SlickException
     {
         AppGameContainer appGameContainer=new AppGameContainer(this);
@@ -37,5 +38,6 @@ public class Main extends StateBasedGame
         Main main=new Main("Trapped 'til Doom v: "+VERSION);
         main.create();
     }
+
 
 }
