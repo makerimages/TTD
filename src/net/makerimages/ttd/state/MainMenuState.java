@@ -1,6 +1,7 @@
 package net.makerimages.ttd.state;
 
 import net.makerimages.ttd.Main;
+import net.makerimages.ttd.client.gui.GuiButton;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
@@ -32,6 +33,8 @@ public class MainMenuState extends BasicGameState
     @Override
     public void render(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException
     {
+        GuiButton b=new GuiButton(0,100,100,200,20,"haha",true);
+        b.draw();
         graphics.drawString(Main.VERSION,10,gameContainer.getHeight()-16);
     }
 
