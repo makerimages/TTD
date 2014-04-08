@@ -1,10 +1,7 @@
 package net.makerimages.ttd.client.gui;
 
 import net.makerimages.ttd.client.Sprite;
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Image;
-import org.newdawn.slick.Input;
-import org.newdawn.slick.SlickException;
+import org.newdawn.slick.*;
 import org.newdawn.slick.geom.Rectangle;
 
 /**
@@ -25,13 +22,15 @@ public class GuiButton
         this.w=w;
         this.h=h;
         this.text=displayText;
-        this.enabled=enable;   //TODO: add disabling
+        this.enabled=enable;   //TODO: add disabling method
         try {
             Image guiImage=new Image("res/textures/gui.png");
             this.notHover=new Sprite(guiImage,0,0,200,20);
             this.notHover.getImage().setFilter(Image.FILTER_NEAREST);
             this.hover=new Sprite(guiImage,0,1,200,20);
             this.hover.getImage().setFilter(Image.FILTER_NEAREST);
+            this.disabled=new Sprite(guiImage,0,2,200,20);
+            this.disabled.getImage().setFilter(Image.FILTER_NEAREST);
         } catch (SlickException e) {
             e.printStackTrace();
         }
@@ -52,6 +51,7 @@ public class GuiButton
         {
             isHovering = getBounds().contains(x, y);
         }
+
     }
 
     public boolean clickedOn()
@@ -75,16 +75,25 @@ public class GuiButton
 
     public void draw()
     {
+
         if(enabled)
         {
             if(!isHovering)
             {
-                this.notHover.getImage().draw(this.x,this.y,this.w*2,this.h*2);
+                notHover.getImage().setCenterOfRotation(100, 10);
+                notHover.getImage().draw(this.x,this.y,this.w*2,this.h*2);
             }
             else
             {
-                this.hover.getImage().draw(this.x,this.y,this.w*2,this.h*2);
+
+                hover.getImage().draw(this.x,this.y,this.w*2,this.h*2);
+
             }
+        }
+        else
+        {
+            disabled.getImage().draw(this.x,this.y,this.w*2,this.h*2);
+
         }
     }
 }
