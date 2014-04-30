@@ -10,7 +10,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../LIBRARIES/slick/lib/lwjgl.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/slick/lwjgl.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -19,7 +19,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../LIBRARIES/slick/lib/jinput.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/slick/jinput.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -28,7 +28,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../LIBRARIES/slick/lib/jorbis-0.0.15.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/slick/jorbis-0.0.15.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -37,7 +37,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../LIBRARIES/slick/lib/jogg-0.0.7.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/slick/jogg-0.0.7.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -46,7 +46,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../LIBRARIES/slick/lib/slick.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/slick/slick.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
