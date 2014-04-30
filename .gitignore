@@ -214,8 +214,11 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 
-#########
-##Idea
-#########
-.idea
-out/
+
+#############
+## IntelliJ IDEA
+#############
+
+.idea/workspace.xml
+.idea/tasks.xml
+out
