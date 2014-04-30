@@ -2,7 +2,16 @@ package net.makerimages.ttd.client.gui;
 
 import net.makerimages.ttd.client.Sprite;
 import org.newdawn.slick.*;
+import org.newdawn.slick.Color;
+import org.newdawn.slick.Font;
+import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Image;
+import org.newdawn.slick.geom.*;
 import org.newdawn.slick.geom.Rectangle;
+import org.newdawn.slick.util.ResourceLoader;
+
+import java.awt.*;
+import java.io.InputStream;
 
 /**
  * Created by Makerimages on 6.04.2014.
@@ -14,6 +23,7 @@ public class GuiButton
     public int id;
     public Sprite notHover,hover, disabled;
     public boolean enabled, isHovering;
+    private TrueTypeFont buttonFont;
     public GuiButton(int id, float x, float y, float w, float h, String displayText,boolean enable)
     {
         this.id=id;
@@ -34,6 +44,18 @@ public class GuiButton
         } catch (SlickException e) {
             e.printStackTrace();
         }
+        try
+        {
+            InputStream inputStream	= ResourceLoader.getResourceAsStream("res/fonts/Main.ttf");
+            java.awt.Font awtFont = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, inputStream);
+            awtFont = awtFont.deriveFont(20f); // set font size
+            buttonFont = new TrueTypeFont(awtFont, false);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
     }
     public Rectangle getBounds()
     {
@@ -73,8 +95,9 @@ public class GuiButton
         }
     }
 
-    public void draw()
+    public void draw(Graphics g)
     {
+
 
         if(enabled)
         {
@@ -82,17 +105,21 @@ public class GuiButton
             {
                 notHover.getImage().setCenterOfRotation(100, 10);
                 notHover.getImage().draw(this.x,this.y,this.w*2,this.h*2);
+                buttonFont.drawString((float)this.x+(this.w*2-buttonFont.getWidth(this.text))/2,(float)this.y+buttonFont.getHeight(this.text)/2,this.text);
+
             }
             else
             {
 
-                hover.getImage().draw(this.x,this.y,this.w*2,this.h*2);
+                hover.getImage().draw(this.x, this.y, this.w * 2, this.h * 2);
+                buttonFont.drawString((float)this.x+(this.w*2-buttonFont.getWidth(this.text))/2,(float)this.y+buttonFont.getHeight(this.text)/2,this.text,Color.gray);
 
             }
         }
         else
         {
-            disabled.getImage().draw(this.x,this.y,this.w*2,this.h*2);
+            disabled.getImage().draw(this.x, this.y, this.w * 2, this.h * 2);
+            buttonFont.drawString((float)this.x+(this.w*2-buttonFont.getWidth(this.text))/2,(float)this.y+buttonFont.getHeight(this.text)/2,this.text, Color.gray);
 
         }
     }
