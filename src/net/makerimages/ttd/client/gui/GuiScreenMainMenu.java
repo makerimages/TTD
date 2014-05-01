@@ -9,18 +9,24 @@ import org.newdawn.slick.state.StateBasedGame;
  */
 public class GuiScreenMainMenu extends GuiScreen
 {
-    @Override
-    public void init()
+
+    public GuiScreenMainMenu()
     {
-        super.init();
-        this.buttonList.add(new GuiButton(0, 200, 100, 200, 20, "Singleplayer", false));
-        this.buttonList.add(new GuiButton(1, 200, 150, 200, 20, "Options", false));
-        this.buttonList.add(new GuiButton(2, 200, 200, 200, 20, "Exit", true));
+        super();
+
+
     }
 
     @Override
-    public void actionPerformed(GuiButton guiButton, StateBasedGame stateBasedGame) throws SlickException
-    {
+    public void init() {
+        super.init();
+        this.buttonList.add(new GuiButton(0,200,100,200,20,"Singleplayer",false));
+        this.buttonList.add(new GuiButton(1,200,150,200,20,"Options", false));
+        this.buttonList.add(new GuiButton(2,200,200,200,20,"Exit", true));
+    }
+
+    @Override
+    public void actionPerformed(GuiButton guiButton, StateBasedGame stateBasedGame) throws SlickException {
         super.actionPerformed(guiButton, stateBasedGame);
         switch (guiButton.id)
         {
@@ -30,9 +36,9 @@ public class GuiScreenMainMenu extends GuiScreen
     }
 
     @Override
-    public void drawScreen(Graphics graphics)
-    {
+    public void drawScreen(Graphics graphics) {
         drawTerraBack();
         super.drawScreen(graphics);
+
     }
 }
