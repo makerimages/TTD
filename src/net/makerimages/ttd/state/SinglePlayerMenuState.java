@@ -11,9 +11,16 @@ import org.newdawn.slick.state.StateBasedGame;
  */
 public class SinglePlayerMenuState extends BasicGameState
 {
+    private int id;
+
+    public SinglePlayerMenuState(int id)
+    {
+        this.id =id;
+    }
+
     @Override
     public int getID() {
-        return 0;
+        return this.id;
     }
 
     @Override
