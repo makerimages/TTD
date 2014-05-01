@@ -1,13 +1,7 @@
 package net.makerimages.ttd.client;
 
-import com.sun.org.apache.xml.internal.utils.IntVector;
 import org.newdawn.slick.Image;
 
-import java.awt.*;
-
-/**
- * Created by Makerimages on 4.01.14.
- */
 public class Sprite {
 
     private Image sheet, image;
@@ -15,12 +9,12 @@ public class Sprite {
     private int sizeX;
     private int sizeY;
 
-    public Sprite(Image sheet, int x, int y, int sizeX,int sizeY) {
+    public Sprite(Image sheet, int x, int y, int sizeX, int sizeY) {
         this.sheet = sheet;
         this.x = x;
         this.y = y;
         this.sizeX = sizeX;
-        this.sizeY=sizeY;
+        this.sizeY = sizeY;
         this.loadSprite();
     }
 
@@ -47,7 +41,4 @@ public class Sprite {
     public int getY() {
         return y;
     }
-
-
-
 }

@@ -6,16 +6,12 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 
-/**
- * Created by Kodukas on 1.05.2014.
- */
-public class SinglePlayerMenuState extends BasicGameState
-{
-    private int id;
+public class SinglePlayerMenuState extends BasicGameState {
 
-    public SinglePlayerMenuState(int id)
-    {
-        this.id =id;
+    private final int id;
+
+    public SinglePlayerMenuState(int id) {
+        this.id = id;
     }
 
     @Override
