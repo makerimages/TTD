@@ -1,6 +1,7 @@
 package net.makerimages.ttd;
 
 import net.makerimages.ttd.state.MainMenuState;
+import net.makerimages.ttd.state.SinglePlayerMenuState;
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
@@ -20,7 +21,9 @@ public class Main extends StateBasedGame
     @Override
     public void initStatesList(GameContainer gameContainer) throws SlickException
     {
+
         addState(new MainMenuState(0));
+        addState(new SinglePlayerMenuState(1));
     }
 
 

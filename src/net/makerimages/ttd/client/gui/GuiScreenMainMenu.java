@@ -20,7 +20,7 @@ public class GuiScreenMainMenu extends GuiScreen
     @Override
     public void init() {
         super.init();
-        this.buttonList.add(new GuiButton(0,200,100,200,20,"Singleplayer",false));
+        this.buttonList.add(new GuiButton(0,200,100,200,20,"Singleplayer",true));
         this.buttonList.add(new GuiButton(1,200,150,200,20,"Options", false));
         this.buttonList.add(new GuiButton(2,200,200,200,20,"Exit", true));
     }
@@ -30,8 +30,12 @@ public class GuiScreenMainMenu extends GuiScreen
         super.actionPerformed(guiButton, stateBasedGame);
         switch (guiButton.id)
         {
+            case 0:
+                stateBasedGame.enterState(1);
+                break;
             case 2:
                 stateBasedGame.getContainer().exit();
+                break;
         }
     }
 
