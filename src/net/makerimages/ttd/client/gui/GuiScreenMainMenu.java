@@ -9,7 +9,7 @@ import org.newdawn.slick.state.StateBasedGame;
  */
 public class GuiScreenMainMenu extends GuiScreen
 {
-
+    
     public GuiScreenMainMenu()
     {
         super();

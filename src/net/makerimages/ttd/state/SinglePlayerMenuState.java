@@ -9,7 +9,7 @@ import org.newdawn.slick.state.StateBasedGame;
 /**
  * Created by Kodukas on 1.05.2014.
  */
-public class SinglePlayerState extends BasicGameState
+public class SinglePlayerMenuState extends BasicGameState
 {
     @Override
     public int getID() {

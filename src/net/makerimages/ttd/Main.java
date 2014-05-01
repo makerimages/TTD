@@ -11,9 +11,8 @@ import org.newdawn.slick.state.StateBasedGame;
  */
 public class Main extends StateBasedGame
 {
-    public static final String VERSION = "1.0a4 indev";
-
-    private Main(String title)
+    public static final String VERSION="1.0a4 indev";
+    public Main(String title)
     {
         super(title);
     }
@@ -24,17 +23,21 @@ public class Main extends StateBasedGame
         addState(new MainMenuState(0));
     }
 
-    private void create() throws SlickException
+
+    public void create() throws SlickException
     {
-        AppGameContainer appGameContainer = new AppGameContainer(this);
+        AppGameContainer appGameContainer=new AppGameContainer(this);
         appGameContainer.setDisplayMode(800, 600, false);
         appGameContainer.setVSync(true);
         appGameContainer.start();
+
     }
 
     public static void main(String[] args) throws SlickException
     {
-        Main main = new Main("Trapped 'til Doom v: " + VERSION);
+        Main main=new Main("Trapped 'til Doom v: "+VERSION);
         main.create();
     }
+
+
 }
