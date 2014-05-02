@@ -13,6 +13,11 @@ public class GuiScreen {
 
     public GuiScreen() {
         this.init();
+        try {
+            terraBack = new Sprite(new Image("res/textures/terrain.png"), 1, 0, 16, 16);
+        } catch (SlickException e) {
+            e.printStackTrace();
+        }
     }
 
     public void drawTerraBack() {
@@ -38,11 +43,7 @@ public class GuiScreen {
     }
 
     public void init() {
-        try {
-            terraBack = new Sprite(new Image("res/textures/terrain.png"), 1, 0, 16, 16);
-        } catch (SlickException e) {
-            e.printStackTrace();
-        }
+
     }
 
     public void getMouseClickOn(GameContainer gameContainer, StateBasedGame stateBasedGame) throws SlickException {
