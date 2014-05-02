@@ -1,6 +1,7 @@
 package net.makerimages.ttd.client.gui;
 
 import net.makerimages.ttd.Main;
+import net.makerimages.ttd.state.TrappedTilDoomGameState;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.StateBasedGame;
@@ -21,7 +22,7 @@ public class GuiScreenMainMenu extends GuiScreen {
 
         switch (guiButton.id) {
             case 0:
-                stateBasedGame.enterState(Main.SINGLE_PLAYER_MENU);
+                stateBasedGame.enterState(TrappedTilDoomGameState.SINGLE_PLAYER_MENU);
                 break;
             case 2:
                 stateBasedGame.getContainer().exit();

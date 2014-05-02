@@ -1,14 +1,15 @@
 package net.makerimages.ttd.state;
 
+import net.makerimages.ttd.Main;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.command.InputProvider;
 import org.newdawn.slick.command.KeyControl;
 import org.newdawn.slick.state.StateBasedGame;
 
-public class SinglePlayerMenuState extends TrappedTilDoomGameState {
+public class PlayGameState extends TrappedTilDoomGameState {
 
-    public SinglePlayerMenuState(int id) {
+    public PlayGameState(int id) {
         super(id);
     }
 
@@ -22,10 +23,5 @@ public class SinglePlayerMenuState extends TrappedTilDoomGameState {
                 }
             }
         });
-    }
-
-    @Override
-    public int getID() {
-        return this.id;
     }
 }
