@@ -51,7 +51,8 @@ public class WorldChunk {
         refresh();
     }
 
-    private void refresh() {
+    public void refresh() {
+        //TODO: Tie block update logic to here :D
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
                 double nx = (x + offsetX) / scale;

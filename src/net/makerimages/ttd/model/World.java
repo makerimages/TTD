@@ -35,4 +35,6 @@ public class World {
     public static World load() {
         throw new NotImplementedException();
     }
+
+    public static World save(){throw new NotImplementedException();}
 }

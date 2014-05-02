@@ -21,12 +21,12 @@ public class WorldRenderer {
 
     public void render(World world) {
         WorldChunk chunk = world.getActiveChunk();
-        Image image = sprite.getImage();
+        chunk.refresh();
         for (int x = 0; x < chunk.getWidth(); x++) {
             for (int y = 0; y < chunk.getHeight(); y++) {
                 switch (chunk.getBlock(x, y)) {
                     case 1:
-                        image.draw((float)(x * 16), (float)(y * 16), Color.green);
+                        sprite.getImage().draw((float)(x * 16), (float)(y * 16), Color.green);
                         break;
                     default:
                         break;
