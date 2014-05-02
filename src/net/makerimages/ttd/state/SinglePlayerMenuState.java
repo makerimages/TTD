@@ -1,40 +1,31 @@
 package net.makerimages.ttd.state;
 
 import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.SlickException;
-import org.newdawn.slick.state.BasicGameState;
+import org.newdawn.slick.Input;
+import org.newdawn.slick.command.InputProvider;
+import org.newdawn.slick.command.KeyControl;
 import org.newdawn.slick.state.StateBasedGame;
 
-/**
- * Created by Kodukas on 1.05.2014.
- */
-public class SinglePlayerMenuState extends BasicGameState
-{
-    private int id;
+public class SinglePlayerMenuState extends TrappedTilDoomGameState {
 
-    public SinglePlayerMenuState(int id)
-    {
-        this.id =id;
+    public SinglePlayerMenuState(int id) {
+        super(id);
+    }
+
+    @Override
+    protected void bindCommands(final GameContainer container, final StateBasedGame game, final InputProvider provider) {
+        provider.bindCommand(new KeyControl(Input.KEY_ESCAPE), new ActionCommand() {
+            @Override
+            public void execute(boolean release) {
+                if (!release) {
+                    game.enterState(TrappedTilDoomGameState.MAIN_MENU);
+                }
+            }
+        });
     }
 
     @Override
     public int getID() {
         return this.id;
-    }
-
-    @Override
-    public void init(GameContainer gameContainer, StateBasedGame stateBasedGame) throws SlickException {
-
-    }
-
-    @Override
-    public void render(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException {
-
-    }
-
-    @Override
-    public void update(GameContainer gameContainer, StateBasedGame stateBasedGame, int i) throws SlickException {
-
     }
 }
