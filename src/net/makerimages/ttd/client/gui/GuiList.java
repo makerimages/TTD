@@ -29,7 +29,7 @@ public class GuiList {
         this.frame.getImage().draw(this.x, this.y, this.w, this.h);
         for(int x=0; x<guiListElements.size();x++)
         {
-            guiListElements.get(0).draw(this.x+2,this.y+x*40,this.w-4);
+            guiListElements.get(0).draw(this.x+2,this.y+1+x*40,this.w-4);
         }
     }
 }
