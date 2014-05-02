@@ -23,7 +23,8 @@ public class GuiScreenSinglePlayerMenu extends GuiScreen
         guiList.guiListElements.add(new GuiListElement("Not Important test text, will be save name"));
         guiList.guiListElements.add(new GuiListElement("Not Important test text, will be save name"));
         guiList.guiListElements.add(new GuiListElement("Not Important test text, will be save name"));
-
+        guiList.guiListElements.add(new GuiListElement("Not Important test text, will be save name"));
+        guiList.guiListElements.add(new GuiListElement("Not Important test text, will be save name"));
 
 
     }
