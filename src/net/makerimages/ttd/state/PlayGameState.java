@@ -1,9 +1,11 @@
 package net.makerimages.ttd.state;
 
-import net.makerimages.ttd.client.Sprite;
 import net.makerimages.ttd.model.World;
 import net.makerimages.ttd.view.WorldRenderer;
-import org.newdawn.slick.*;
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Input;
+import org.newdawn.slick.SlickException;
 import org.newdawn.slick.command.InputProvider;
 import org.newdawn.slick.command.KeyControl;
 import org.newdawn.slick.state.StateBasedGame;
@@ -19,7 +21,9 @@ public class PlayGameState extends TrappedTilDoomGameState {
 
     @Override
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
-        world = new World();
+        world = World.generate();
+        world.getActiveChunk().resize(container.getScreenWidth() / 16 + 1, container.getScreenHeight() / 16 + 1);
+
         worldRenderer = new WorldRenderer();
         worldRenderer.init();
     }
