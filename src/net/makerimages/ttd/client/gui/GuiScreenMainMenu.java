@@ -1,6 +1,5 @@
 package net.makerimages.ttd.client.gui;
 
-import net.makerimages.ttd.Main;
 import net.makerimages.ttd.state.TrappedTilDoomGameState;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
